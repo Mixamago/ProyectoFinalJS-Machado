@@ -1,0 +1,34 @@
+/* PARA USAR ESTE MIXIN, LOS VALORES QUE SE DEBEN SELECCIONAR, EN ORDEN, SON:
+
+1. COLOR DEL BOTÓN NORMALMENTE.
+2. COLOR DE LA LETRA DEL BOTÓN NORMALMENTE.
+3. PADDING EN EL EJE Y.
+4. PADDING EN EL EJE X.
+5. COLOR DEL BOTÓN EN HOVER.
+6. COLOR DE LA LETRA EN HOVER.
+ */
+
+ @mixin boton ($fcolor, $lcolor, $p1, $p2, $fhcolor, $lhcolor){
+    border: none;
+    border-radius: 1rem;
+    background: map-get($map:$colores, $key:$fcolor);;
+    color: map-get($map:$colores, $key:$lcolor);
+    padding: $p1 $p2;
+    transition: 1s;
+    &:hover{
+        background: map-get($map:$colores, $key:$fhcolor);
+        color: map-get($map:$colores, $key:$lhcolor);
+    }
+}
+
+@mixin botonsr ($fcolor, $lcolor, $p1, $p2, $fhcolor, $lhcolor){
+    border: none;
+    background: map-get($map:$colores, $key:$fcolor);;
+    color: map-get($map:$colores, $key:$lcolor);
+    padding: $p1 $p2;
+    transition: 1s;
+    &:hover{
+        background: map-get($map:$colores, $key:$fhcolor);
+        color: map-get($map:$colores, $key:$lhcolor);
+    }
+}

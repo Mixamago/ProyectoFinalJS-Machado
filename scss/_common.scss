@@ -1,0 +1,311 @@
+///////////////////////////////////////////
+/// CONFIGURACIÓN GENERAL DEL SITIO WEB ///
+///////////////////////////////////////////
+
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+};
+
+html{
+	font-size: 62.5%;    
+};
+
+body{
+    background-image: url(../img/otros/fondo.webp);
+	background-color: map-get($map:$colores, $key:"blanco");
+};
+
+/////////////////////////////
+/// SELECTORES GHENERALES ///
+/////////////////////////////
+
+.ocultar{
+	display: none;
+};
+
+
+.esconder{
+	visibility: hidden;
+}
+
+.centro{
+	text-align: center;
+};
+
+.titulo{
+	text-align: center;
+	font-size: $txtXl;
+	font-weight: $bold;
+	color: map-get($map:$colores, $key:"verdec");
+	font-family: $bodoni;
+};
+
+/////////////////////////////////
+/// SELECTORES DEL ENCABEZADO ///
+/////////////////////////////////
+
+#encabezado{
+	font-size: $txtMd;
+	font-family: $bodoni;
+	height: 10rem;
+	background: map-get($map:$colores, $key:"negro");
+	color: map-get($map:$colores, $key:"blanco");
+};
+
+.apiInfo{
+	background: map-get($map:$colores, $key:"negro");
+	color: map-get($map:$colores, $key:"blanco");
+	font-size: $txtSm;
+};
+
+.logo{
+	height: 8rem;
+	width: auto;
+};
+
+.botonLogin{
+	@include boton ("verdeo", "blanco", 1rem, 2.5rem, "verdec", "negro");
+
+}
+
+////////////////////////////
+/// SELECTORES DEL LOGIN ///
+////////////////////////////
+
+.cajaLogin{
+	background: map-get($map:$colores, $key:"negrot");
+	height: 405px;
+	width: 60%;
+	margin-top: 1rem;
+	form{
+		text-align: center;
+		padding: 2rem;
+		label{
+			padding: 1rem 0;
+			font-size: $txtMd;
+			font-family: $bodoni;
+			color: map-get($map:$colores, $key:"blanco");
+		}
+		input{
+			font-size: $txtMd;
+			width: 50%;
+		}
+		button{
+			@include boton ("verdeo", "blanco", 0.4rem, 4rem, "verdec", "negro");
+			font-size: $txtMd;
+			margin-top: 4rem;
+		}
+	}
+}
+
+///////////////////////////////
+/// SELECTORES DEL CATALOGO ///
+///////////////////////////////
+
+.cajaCatalogo{
+	background: map-get($map:$colores, $key:"negrot");
+	margin-top: 5rem;
+	padding: 3rem 0;
+}
+
+.filtro{
+	width: 20%;
+	color: map-get($map:$colores, $key:"blanco");
+	font-size: $txtSm;
+	div{
+		.form-check{
+			font-size: $txtMd;
+		}
+	}
+}
+
+.botonFiltro, .botonCarrito{
+	@include boton ("verdeo", "blanco", 0.5rem, 0, "verdec", "negro");
+	width: 90%;
+	font-size: $txtMd;
+}
+
+.prevCarrito{
+	text-align: center;
+	font-size: $txtSm;
+	font-weight: $bold;
+	color: map-get($map:$colores, $key:"amarillo");
+}
+
+.tarjeta{
+	width: 200px;
+	border: solid 2px map-get($map:$colores, $key:"blanco");
+	border-radius: 13px 13px 0 0;
+	text-align: center;
+	img{
+		width: 100%;
+		border-radius: 1rem 1rem 0 0;
+		border-bottom: solid 2px map-get($map:$colores, $key:"blanco");
+		margin-bottom: 1rem;
+	}
+	h4{
+		color: map-get($map:$colores, $key:"blanco");
+		font-size: $txtMd;
+		text-align: center;
+	}
+}
+
+.costo{
+	font-weight: $bold;
+	color: map-get($map:$colores, $key:"amarillo");
+	font-size: $txtLg;
+	text-align: center;	
+}
+
+.botonAgregar{
+	@include botonsr ("verdeo", "blanco", 0.5rem, 0rem, "verdec", "negro");
+	width: 100%;
+	font-size: $txtMd;
+}
+
+.pista{
+	color: map-get($map:$colores, $key:"blanco");
+	margin-top: 1rem;
+}
+
+//////////////////////////////
+/// SELECTORES DEL CARRITO ///
+//////////////////////////////
+
+#carrito{
+	background: map-get($map:$colores, $key:"negrot");
+	height: 300px;
+	padding: 1rem 3rem;
+	overflow-y: auto;
+}
+
+.tabla{
+	color: map-get($map:$colores, $key:"blanco");
+	font-size: $txtSm;
+	padding-left: 2rem;
+	thead{
+		font-size: $txtLg;
+		text-align: center;
+		background: map-get($map:$colores, $key:"negro");
+		border-bottom: 2px solid map-get($map:$colores, $key:"blanco");
+		font-family: $bodoni;
+	}
+	tbody{
+		text-align: center;
+		transition: 0.5s;
+		tr{
+			&:hover{
+				background: map-get($map:$colores, $key:"negro");
+			}
+			img{
+				width: 100px;
+				padding: 1rem 0;
+			}
+			td{
+				font-size: $txtMd;
+				border-bottom: 2px solid map-get($map:$colores, $key:"blanco");
+		font-family: $bodoni;
+			}
+		}
+	}
+	tfoot{
+		text-align: center;
+		font-size: $txtXl;
+		font-weight: $bold;
+		font-family: $bodoni;
+		transition: 0.5s;
+		border-bottom: 2px solid map-get($map:$colores, $key:"blanco");
+		font-family: $bodoni;
+		&:hover{
+			background: map-get($map:$colores, $key:"negro");
+		}
+	};
+}
+
+.total{
+	color: map-get($map:$colores, $key:"amarillo");
+}
+
+.botonBorrar{
+	@include boton ("rojoo", "blanco", 0.5rem, 1rem, "rojoc", "negro")
+}
+
+.subtotal{
+	color: map-get($map:$colores, $key:"amarillo");
+}
+
+.botonComprar, .botonOcultar{
+	@include boton ("verdeo", "blanco", 1rem, 1rem, "verdec", "negro");
+	font-size: $txtMd;
+	margin: 3rem;
+}
+
+.botonLimpiar{
+	@include boton ("rojoo", "blanco", 1rem, 1rem, "rojoc", "negro");
+	font-size: $txtMd;
+	margin: 3rem;
+}
+
+////////////////////////////////////////
+/// SELECTORES DE LA VENTANA DE PAGO ///
+////////////////////////////////////////
+
+#pagar{
+	background: map-get($map:$colores, $key:"negrot");
+	margin-top: 3rem;
+	padding: 1rem 3rem;
+}
+
+.menuPago{
+	width: 24%;
+	background: map-get($map:$colores, $key:"negro");
+	border: 2px solid map-get($map:$colores, $key:"blanco");
+	padding: 2rem;
+	font-size: $txtSm;
+	color: map-get($map:$colores, $key:"blanco");
+	p{
+		span{
+			color: map-get($map:$colores, $key:"amarillo");
+			font-weight: $bold;
+		}
+	}
+	div{
+		div{
+			input{
+				font-size: $txtSm;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.botonAdelante{
+	@include botonsr ("verdeo", "blanco", 1rem, 0rem, "verdec", "negro");
+	width: 100%;
+	font-weight: $bold;
+}
+
+.botonAtras{
+	@include botonsr ("rojoo", "blanco", 1rem, 0rem, "rojoc", "negro");
+	width: 100%;
+	font-weight: $bold;
+}
+
+.compraFinalizada{
+	font-size: $txtMd;
+	font-weight: $bold;
+	color: map-get($map:$colores, $key:"amarillo");
+}
+
+/////////////////////////////
+/// SELECTORES DEL FOOTER ///
+/////////////////////////////
+
+#pie{
+	font-size: $txtSm;
+	background: map-get($map:$colores, $key:"negro");
+	color: map-get($map:$colores, $key:"blanco");
+	margin-top: 3rem;
+};

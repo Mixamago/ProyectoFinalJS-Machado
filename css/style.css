@@ -1,0 +1,298 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&family=Roboto:wght@400;700&display=swap");
+/* PARA USAR ESTE MIXIN, LOS VALORES QUE SE DEBEN SELECCIONAR, EN ORDEN, SON:
+
+1. COLOR DEL BOTÓN NORMALMENTE.
+2. COLOR DE LA LETRA DEL BOTÓN NORMALMENTE.
+3. PADDING EN EL EJE Y.
+4. PADDING EN EL EJE X.
+5. COLOR DEL BOTÓN EN HOVER.
+6. COLOR DE LA LETRA EN HOVER.
+ */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-image: url(../img/otros/fondo.webp);
+  background-color: #cecece; }
+
+.ocultar {
+  display: none; }
+
+.esconder {
+  visibility: hidden; }
+
+.centro {
+  text-align: center; }
+
+.titulo {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #28c930;
+  font-family: "Bodoni Moda", serif; }
+
+#encabezado {
+  font-size: 2rem;
+  font-family: "Bodoni Moda", serif;
+  height: 10rem;
+  background: #212121;
+  color: #cecece; }
+
+.apiInfo {
+  background: #212121;
+  color: #cecece;
+  font-size: 1.5rem; }
+
+.logo {
+  height: 8rem;
+  width: auto; }
+
+.botonLogin {
+  border: none;
+  border-radius: 1rem;
+  background: #0e6112;
+  color: #cecece;
+  padding: 1rem 2.5rem;
+  transition: 1s; }
+  .botonLogin:hover {
+    background: #28c930;
+    color: #212121; }
+
+.cajaLogin {
+  background: rgba(33, 33, 33, 0.95);
+  height: 405px;
+  width: 60%;
+  margin-top: 1rem; }
+  .cajaLogin form {
+    text-align: center;
+    padding: 2rem; }
+    .cajaLogin form label {
+      padding: 1rem 0;
+      font-size: 2rem;
+      font-family: "Bodoni Moda", serif;
+      color: #cecece; }
+    .cajaLogin form input {
+      font-size: 2rem;
+      width: 50%; }
+    .cajaLogin form button {
+      border: none;
+      border-radius: 1rem;
+      background: #0e6112;
+      color: #cecece;
+      padding: 0.4rem 4rem;
+      transition: 1s;
+      font-size: 2rem;
+      margin-top: 4rem; }
+      .cajaLogin form button:hover {
+        background: #28c930;
+        color: #212121; }
+
+.cajaCatalogo {
+  background: rgba(33, 33, 33, 0.95);
+  margin-top: 5rem;
+  padding: 3rem 0; }
+
+.filtro {
+  width: 20%;
+  color: #cecece;
+  font-size: 1.5rem; }
+  .filtro div .form-check {
+    font-size: 2rem; }
+
+.botonFiltro, .botonCarrito {
+  border: none;
+  border-radius: 1rem;
+  background: #0e6112;
+  color: #cecece;
+  padding: 0.5rem 0;
+  transition: 1s;
+  width: 90%;
+  font-size: 2rem; }
+  .botonFiltro:hover, .botonCarrito:hover {
+    background: #28c930;
+    color: #212121; }
+
+.prevCarrito {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b8b800; }
+
+.tarjeta {
+  width: 200px;
+  border: solid 2px #cecece;
+  border-radius: 13px 13px 0 0;
+  text-align: center; }
+  .tarjeta img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: solid 2px #cecece;
+    margin-bottom: 1rem; }
+  .tarjeta h4 {
+    color: #cecece;
+    font-size: 2rem;
+    text-align: center; }
+
+.costo {
+  font-weight: 700;
+  color: #b8b800;
+  font-size: 3rem;
+  text-align: center; }
+
+.botonAgregar {
+  border: none;
+  background: #0e6112;
+  color: #cecece;
+  padding: 0.5rem 0rem;
+  transition: 1s;
+  width: 100%;
+  font-size: 2rem; }
+  .botonAgregar:hover {
+    background: #28c930;
+    color: #212121; }
+
+.pista {
+  color: #cecece;
+  margin-top: 1rem; }
+
+#carrito {
+  background: rgba(33, 33, 33, 0.95);
+  height: 300px;
+  padding: 1rem 3rem;
+  overflow-y: auto; }
+
+.tabla {
+  color: #cecece;
+  font-size: 1.5rem;
+  padding-left: 2rem; }
+  .tabla thead {
+    font-size: 3rem;
+    text-align: center;
+    background: #212121;
+    border-bottom: 2px solid #cecece;
+    font-family: "Bodoni Moda", serif; }
+  .tabla tbody {
+    text-align: center;
+    transition: 0.5s; }
+    .tabla tbody tr:hover {
+      background: #212121; }
+    .tabla tbody tr img {
+      width: 100px;
+      padding: 1rem 0; }
+    .tabla tbody tr td {
+      font-size: 2rem;
+      border-bottom: 2px solid #cecece;
+      font-family: "Bodoni Moda", serif; }
+  .tabla tfoot {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: "Bodoni Moda", serif;
+    transition: 0.5s;
+    border-bottom: 2px solid #cecece;
+    font-family: "Bodoni Moda", serif; }
+    .tabla tfoot:hover {
+      background: #212121; }
+
+.total {
+  color: #b8b800; }
+
+.botonBorrar {
+  border: none;
+  border-radius: 1rem;
+  background: #820505;
+  color: #cecece;
+  padding: 0.5rem 1rem;
+  transition: 1s; }
+  .botonBorrar:hover {
+    background: #f21313;
+    color: #212121; }
+
+.subtotal {
+  color: #b8b800; }
+
+.botonComprar, .botonOcultar {
+  border: none;
+  border-radius: 1rem;
+  background: #0e6112;
+  color: #cecece;
+  padding: 1rem 1rem;
+  transition: 1s;
+  font-size: 2rem;
+  margin: 3rem; }
+  .botonComprar:hover, .botonOcultar:hover {
+    background: #28c930;
+    color: #212121; }
+
+.botonLimpiar {
+  border: none;
+  border-radius: 1rem;
+  background: #820505;
+  color: #cecece;
+  padding: 1rem 1rem;
+  transition: 1s;
+  font-size: 2rem;
+  margin: 3rem; }
+  .botonLimpiar:hover {
+    background: #f21313;
+    color: #212121; }
+
+#pagar {
+  background: rgba(33, 33, 33, 0.95);
+  margin-top: 3rem;
+  padding: 1rem 3rem; }
+
+.menuPago {
+  width: 24%;
+  background: #212121;
+  border: 2px solid #cecece;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: #cecece; }
+  .menuPago p span {
+    color: #b8b800;
+    font-weight: 700; }
+  .menuPago div div input {
+    font-size: 1.5rem;
+    text-align: center; }
+
+.botonAdelante {
+  border: none;
+  background: #0e6112;
+  color: #cecece;
+  padding: 1rem 0rem;
+  transition: 1s;
+  width: 100%;
+  font-weight: 700; }
+  .botonAdelante:hover {
+    background: #28c930;
+    color: #212121; }
+
+.botonAtras {
+  border: none;
+  background: #820505;
+  color: #cecece;
+  padding: 1rem 0rem;
+  transition: 1s;
+  width: 100%;
+  font-weight: 700; }
+  .botonAtras:hover {
+    background: #f21313;
+    color: #212121; }
+
+.compraFinalizada {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b8b800; }
+
+#pie {
+  font-size: 1.5rem;
+  background: #212121;
+  color: #cecece;
+  margin-top: 3rem; }

@@ -1,0 +1,36 @@
+///////////////
+/// COLORES ///
+///////////////
+
+$colores:(
+    "negro": rgb(33, 33, 33),
+    "negrot": rgba(33, 33, 33, 0.95),
+    "blanco": rgb(206, 206, 206),
+    "verdeo": rgb(14, 97, 18),
+    "verdec": rgb(40, 201, 48),
+    "amarillo": rgb(184, 184, 0),    
+    "rojoo": rgb(130, 5, 5),
+    "rojoc": rgb(242, 19, 19)
+);
+
+//////////////////////////
+/// FAMILIA DE FUENTES ///
+//////////////////////////
+
+$bodoni: 'Bodoni Moda', serif;
+$roboto: 'Roboto', sans-serif;
+
+/////////////////////////
+/// TAMAÑO DE FUENTES ///
+/////////////////////////
+
+$txtSm: 1.5rem;
+$txtMd: 2rem;
+$txtLg: 3rem;
+$txtXl: 4rem;
+
+///////////////////////////////////
+/// PESO TIPOGRAFICO DE FUENTES ///
+///////////////////////////////////
+
+$bold: 700;
